@@ -20,6 +20,7 @@ jobs:
       
       - name: Run tests
         run: npm test
+        working-directory: /d/Cloud and DevOps LearnBay/github-actions
       
       - name: Run linter
         run: npm run lint
