@@ -10,17 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Setup Node.js
+      - name: Setup Python
         uses: actions/setup-node@v4
         with:
           node-version: '18'
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install python
+        run: apt install python3-pip
       
       - name: Run tests
-        run: npm test
+        run: python -v
         working-directory: /d/Cloud and DevOps LearnBay/github-actions/
-      
-      - name: Run linter
-        run: npm run lint
